@@ -1,0 +1,27 @@
+MANUAL DE USO - ROBÔ SIMPLES NACIONAL
+
+Preparação Antes de Iniciar:
+
+Certifique-se de que o Google Chrome esteja completamente fechado no seu computador. Se houver alguma janela do Chrome aberta, o robô não conseguirá assumir o controle e dará erro.
+
+Como realizar a consulta:
+
+Abra o aplicativo "Robô Simples Nacional".
+
+Na caixa de texto principal, cole a sua lista de CNPJs. Coloque apenas os números ou o CNPJ formatado (com pontos e traços), garantindo que fique um CNPJ por linha.
+
+Clique no botão verde "▶ Iniciar Consulta".
+
+O sistema abrirá uma nova janela do Google Chrome automaticamente. Não minimize e não feche esta janela.
+
+Atenção ao Primeiro Acesso: Se a Receita Federal exibir um desafio de imagens (ex: "clique nas faixas de pedestre"), resolva-o manualmente com o seu mouse. Após resolver o primeiro, o sistema memorizará o seu acesso (através do perfil salvo na unidade C:) e fará o restante automaticamente.
+
+Acompanhe a barra de progresso e a tabela na tela do aplicativo. O robô pesquisará empresa por empresa de forma contínua.
+
+Exportando os Resultados:
+
+Aguarde a mensagem de "Consulta Finalizada com Sucesso".
+
+Os botões de exportação serão liberados.
+
+Clique em "Salvar Excel" para gerar uma planilha com os dados, ou em "Salvar PDF" para gerar um relatório formatado e pronto para impressão.
