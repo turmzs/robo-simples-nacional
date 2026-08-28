@@ -1,20 +1,19 @@
 # -*- mode: python ; coding: utf-8 -*-
 
-"""
-Arquivo de configuração do PyInstaller (.spec)
-Projeto: Robô Simples Nacional - Automação de Consultas
-"""
+from PyInstaller.utils.hooks import collect_submodules, collect_data_files
 
 block_cipher = None
 
+# Coleta forçada de todos os submódulos e arquivos de dados do pandas e openpyxl
+pandas_submodules = collect_submodules('pandas') + collect_submodules('openpyxl')
+pandas_datas = collect_data_files('pandas')
+
 a = Analysis(
-    ['main.py'],  # Arquivo principal que inicia a interface Tkinter
+    ['main.py'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=pandas_datas,  # Inclui os arquivos de dados necessários do pandas
     hiddenimports=[
-        'pandas',
-        'openpyxl',
         'fpdf',
         'playwright',
         'playwright.async_api',
@@ -24,7 +23,7 @@ a = Analysis(
         'subprocess',
         're',
         'json'
-    ],
+    ] + pandas_submodules,  # Adiciona todos os submódulos coletados
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
@@ -44,18 +43,18 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='Robo_SimplesNacional',  # Nome do arquivo executável final (.exe)
+    name='Robo_SimplesNacional',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
     upx=True,
     upx_exclude=[],
     runtime_tmpdir=None,
-    console=False,  # False remove a tela preta do console; mude para True se precisar depurar erros
+    console=False,  # Oculta a janela de console do Windows
     disable_windowed_traceback=False,
     argv_emulation=False,
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=None  # Para adicionar um ícone futuramente, insira o caminho do arquivo .ico aqui
+    icon=None
 )
