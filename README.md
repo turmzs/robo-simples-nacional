@@ -1,4 +1,4 @@
-# 🤖 Robô Simples Nacional - Consulta Lote (Anti-CAPTCHA)
+# 🤖 Robô Simples Nacional - Consulta Lote (Anti-CAPTCHA) por Artur Menezes - Auditar Contabilidade
 
 Um aplicativo desktop desenvolvido em Python (Tkinter + Playwright) para automatizar consultas em lote no portal do Simples Nacional da Receita Federal do Brasil.
 
@@ -40,3 +40,4 @@ uv venv
 
 # Ativa o ambiente virtual (Windows)
 .venv\Scripts\activate
+'''
